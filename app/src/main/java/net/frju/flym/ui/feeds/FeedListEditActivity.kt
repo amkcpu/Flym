@@ -20,8 +20,11 @@ package net.frju.flym.ui.feeds
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_feed_list_edit.*
 import net.fred.feedex.R
+import net.frju.flym.ui.main.FeedSearchDialog
 import net.frju.flym.utils.setupTheme
+import org.jetbrains.anko.sdk21.listeners.onClick
 
 class FeedListEditActivity : AppCompatActivity() {
 
@@ -33,6 +36,10 @@ class FeedListEditActivity : AppCompatActivity() {
 		supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 		setContentView(R.layout.activity_feed_list_edit)
+
+		add_feed_edit_list_fab.onClick {
+			FeedSearchDialog(this).show()
+		}
 	}
 
 	override fun onOptionsItemSelected(item: MenuItem?): Boolean {

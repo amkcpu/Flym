@@ -141,6 +141,9 @@ class FeedListEditFragment : Fragment() {
                         .show()
                 return true
             }
+
+            R.id.import_feeds_edit -> null
+            R.id.export_feeds_edit -> null
         }
 
         return false
